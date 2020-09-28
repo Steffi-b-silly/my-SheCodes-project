@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Steffis weather app</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <div class="row justify-content-start enterCity" id="enterCity">
+          <div class="col-2">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="City of choice"
+              required=""
+              autofocus="on"
+              id="city-input"
+            />
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-warning">Enter</button>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-light button-round"
+              id="current-location"
+            >
+              Use your location
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <p class="cityName" id="city"></p>
+      <div class="move-right">
+        <p class="dayTime" id="date"></p>
+        <p class="weatherWording" id="weather-wording"></p>
+        <div class="row weatherColor">
+          <p class="col-6 weatherTemperature">
+            <!--<i class="fas fa-cloud-sun"></i>-->
+            <span id="temperature"></span
+            ><span id="units"
+              ><a href="#" id="celsiusTemp">°C</a>|<a
+                href="#"
+                id="fahrenheitTemp"
+                >°F</a
+              ></span
+            >
+          </p>
+          <p class="col-6 rain-wind">
+            Humidity: <span id="humidity"></span>% <br />Wind:
+            <span id="wind"></span>km/h
+          </p>
+        </div>
+        <button type="button" class="btn btn-light button-5-days">
+          Five day forecast
+        </button>
+        <div class="row row-cols-5 five-days">
+          <div class="col five-day-color">
+            Monday<br /><i class="fas fa-cloud-sun"></i>23°/11°
+          </div>
+          <div class="col five-day-color">
+            Tuesday<br /><i class="fas fa-cloud-sun"></i>26°/13°
+          </div>
+          <div class="col five-day-color">
+            Wednesday<br /><i class="fas fa-cloud-sun"></i>27°/16°
+          </div>
+          <div class="col five-day-color">
+            Thursday<br /><i class="fas fa-cloud-sun"></i>23°/12°
+          </div>
+          <div class="col five-day-color">
+            Friday<br /><i class="fas fa-sun"></i>26°/13°
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="src/script.js"></script>
+  </body>
+</html>
